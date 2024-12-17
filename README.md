@@ -184,9 +184,9 @@ DIP_Dashboard/
 
 ---
 
-## Contributors
+## Contributor
 
-- **Your Name** – Ramzi Abdulalishoev
+– Ramzi Abdulalishoev
 
 ---
 
