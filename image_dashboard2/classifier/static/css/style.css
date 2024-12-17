@@ -1,0 +1,239 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #f7f7f7;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.main-header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 50px;
+    margin-right: 20px;
+}
+
+.header-text .title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.header-text .subtitle {
+    margin: 5px 0 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.content-wrapper {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.input-mode-toggle {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.mode-btn {
+    background: #eee;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+}
+
+.mode-btn.active {
+    background: #333;
+    color: #fff;
+}
+
+.inputs-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.upload-area,
+.camera-area,
+.models-area {
+    flex: 1;
+    min-width: 300px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.upload-label {
+    display: block;
+    border: 2px dashed #888;
+    border-radius: 6px;
+    padding: 40px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+}
+
+.upload-label:hover {
+    border-color: #555;
+}
+
+.upload-label input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+}
+
+.upload-instructions {
+    font-size: 1rem;
+    color: #333;
+}
+
+.image-preview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.image-preview img {
+    max-width: 100%;
+    border-radius: 6px;
+}
+
+.camera-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#videoElement {
+    max-width: 100%;
+    border-radius: 6px;
+    background: #000;
+}
+
+.camera-controls {
+    margin-top: 10px;
+}
+
+.capture-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.capture-btn:hover {
+    background: #444;
+}
+
+.models-area h2 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.model-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inference-bar {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#runInferenceButton {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#runInferenceButton:hover {
+    background: #444;
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.result-card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 15px;
+    flex: 1 1 240px;
+    box-sizing: border-box;
+}
+
+.result-card h3 {
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.prediction-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.prediction-list li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    border-bottom: 1px solid #eee;
+    padding: 5px 0;
+}
+
+.prediction-list li:last-child {
+    border-bottom: none;
+}
+
+.main-footer {
+    text-align: center;
+    color: #777;
+    padding: 15px 0;
+    font-size: 0.8rem;
+    border-top: 1px solid #ddd;
+    background: #fff;
+}

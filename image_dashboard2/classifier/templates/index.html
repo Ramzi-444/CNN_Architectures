@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DIP Dashboard UCA</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <img src="{% static 'images/uca_logo.png' %}" alt="UCA Logo" class="logo">
+            <div class="header-text">
+                <h1 class="title">DIP Dashboard UCA</h1>
+                <p class="subtitle">Upload an image or use your camera, select models, and run inference.</p>
+            </div>
+        </div>
+    </header>
+
+    <div class="content-wrapper">
+        <form id="uploadForm" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="input-mode-toggle">
+                <button type="button" class="mode-btn active" id="useFileButton">Use File Upload</button>
+                <button type="button" class="mode-btn" id="useCameraButton">Use Webcam</button>
+            </div>
+
+            <div class="inputs-area">
+                <!-- File Upload Section -->
+                <div class="upload-area" id="fileUploadArea">
+                    <label for="imageInput" class="upload-label">
+                        <div class="upload-instructions">
+                            <strong>Upload Image</strong><br>
+                            Drop Image Here — or — Click to Upload
+                        </div>
+                        <input type="file" id="imageInput" name="image" accept="image/*" required>
+                    </label>
+                    <div class="image-preview" id="imagePreview"></div>
+                </div>
+
+                <!-- Camera Section -->
+                <div class="camera-area" id="cameraArea" style="display:none;">
+                    <video id="videoElement" autoplay playsinline></video>
+                    <div class="camera-controls">
+                        <button type="button" id="captureButton" class="capture-btn">Capture Frame</button>
+                    </div>
+                    <canvas id="captureCanvas" style="display:none;"></canvas>
+                </div>
+
+                <!-- Model Selection -->
+                <div class="models-area">
+                    <h2>Select Models</h2>
+                    <div class="model-list">
+                        <label><input type="checkbox" name="models" value="AlexNet"> AlexNet</label>
+                        <label><input type="checkbox" name="models" value="GoogleNet"> GoogleNet</label>
+                        <label><input type="checkbox" name="models" value="ResNet"> ResNet50</label>
+                        <label><input type="checkbox" name="models" value="DenseNet"> DenseNet121</label>
+                        <label><input type="checkbox" name="models" value="YOLO"> YOLOv5</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="inference-bar">
+                <button type="submit" id="runInferenceButton">Run Inference</button>
+            </div>
+        </form>
+
+        <div id="results" class="results-container"></div>
+    </div>
+
+    <footer class="main-footer">
+        <p>© 2024 UCA - DIP Dashboard</p>
+    </footer>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+
+</html>
