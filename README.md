@@ -47,8 +47,8 @@ A Django-based **Image Classification Dashboard** supporting multiple models lik
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-repo/dip-dashboard-uca.git
-cd dip-dashboard-uca
+git clone https://github.com/Ramzi-444/CNN_Architectures.git
+cd image-dashboard2
 ```
 
 ### 2. Set Up Virtual Environment
