@@ -195,7 +195,7 @@ DIP_Dashboard/
 ![DIP Dashboard Screenshot 1](1.png)
 
 ## Screenshot 2
-![DIP Dashboard Screenshot 2](images/Screenshot2024-12-17_at_13.17.37.png)
+![DIP Dashboard Screenshot 2](2.png)
 
 
 ## License
